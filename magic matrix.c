@@ -18,7 +18,7 @@ int main()
     }
     i=n/2,j=n-1;
     a[i][j]=k++;
-    while(k!=26)
+    while(k<=n*n)
     {
         i--;
         j++;
@@ -32,29 +32,16 @@ int main()
         j=0;
         if(i==-1)
         i=n-1;
+	 while(a[i][j]!=0)
+        {
+            i++;
+           j=j-2;
+        }
         if(a[i][j]==0)
         {
             a[i][j]=k++;
         }
-        while(a[i][j]!=0)
-        {
-            i++;
-           j=j-2;
-           if(i==-1&&j==n)
-           {
-             i=0;
-             j=n-2;
-           }
-           if(j==n)
-             j=0;
-           if(i==-1)
-             i=n-1;
-           if(a[i][j]==0)
-            {
-             a[i][j]=k++;
-            }
-
-        }
+       
        
     }
     printf("now printing the matrix\n");

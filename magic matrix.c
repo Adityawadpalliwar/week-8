@@ -8,7 +8,7 @@ int main()
 	int k=1;
 	printf("enter the value of n");
 	scanf("%d",&n);
-	int a[n][n]={0};
+	int a[n][n];
     for(i=0;i<n;i++)
     {
         for(j=0;j<n;j++)
